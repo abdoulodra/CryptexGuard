@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Boutique Digitale</h2>
+
+<form method="post">
+    <input type="text" name="name" placeholder="Nom du produit" required>
+    <input type="text" name="link" placeholder="Lien de téléchargement" required>
+    <button type="submit">Ajouter un produit</button>
+</form>
+
+<ul>
+    {% for product in products %}
+        <li><strong>{{ product.name }}</strong> - <a href="{{ product.link }}">Télécharger</a></li>
+    {% endfor %}
+</ul>
+{% endblock %}

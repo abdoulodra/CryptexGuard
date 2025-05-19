@@ -1,0 +1,11 @@
+{% extends "layout.html" %}
+{% block content %}
+<h2>Crypter du texte</h2>
+<form method="post">
+    <textarea name="text" rows="4" cols="50" placeholder="Texte à crypter"></textarea><br>
+    <button type="submit">Crypter</button>
+</form>
+{% if result %}
+<p>Résultat : <code>{{ result }}</code></p>
+{% endif %}
+{% endblock %}
